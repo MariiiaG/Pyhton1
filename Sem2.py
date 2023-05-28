@@ -1,23 +1,32 @@
 # По данному целому неотрицательному n вычислите значение n!. 
 # N! = 1 * 2 * 3 * … * N (произведение всех чисел от 1 до N) 0! = 1 Решить задачу используя цикл while
 
+# n = int(input("Введите число n : "))
+# i = 1
+# factorial = 1
+# while i <= n :
+#     factorial *= i
+#     i += 1
+# print(f"Факториал {n} равен {factorial}")
 
 
 # Дано натуральное число A > 1. Определите, каким по счету числом Фибоначчи оно является, 
 # то есть выведите такое число n, что φ(n)=A. Если А не является числом Фибоначчи, выведите число -1.
 
-# print("Введите число : ")
-# num = int(input())
+# limit = int(input("Введите число: "))
 
-# level = 0
-# sum_fib = 0
+# fib_1 = 0
+# fib_2 = 1
+# position = 2
 
-# while sum_fib <= num :
-#     sum_fib = sum_fib + 
-#     sum_fib +1
-#     level += 1
+# while fib_2 < limit :
+#     fib_2, fib_1 = fib_2 + fib_1, fib_2
+#     position += 1
 
-# print(level)
+# if limit == fib_2 :
+#     print(f"В последовательности Фибоначчи число {fib_2} стоит на {position} позиции")
+# else :
+#     print(-1)
 
 # Иван Васильевич пришел на рынок и решил купить два арбуза: один для себя, а другой для тещи. 
 # Понятно, что для себя нужно выбрать арбуз потяжелей, а для тещи полегче. 
@@ -35,19 +44,7 @@
 # for i in range(count):
 #     print(randint(0, 30000))
 
-
-# from random import randint
-# watermelone_count = int(input("Пожалуйста, введите число арбузов: "))
-# min = 10
-# max = 1
-# for i in range(watermelon_count):
-#     watermelon_weight = randint(1,10)
-#     print(watermelon_weight)
-#     if watermelon_weight>max:
-#         max = watermelon_weight
-#     if watermelon_weight<min:
-#         min = watermelon_weight
-# print(f"Мой арбуз - {max} кг, тещин арбуз - {min} кг")
+# 
 
 
 # Уставшие от необычно теплой зимы, жители решили узнать, действительно ли это самая длинная 
@@ -55,3 +52,23 @@
 # занялись исследованиями статистики за прошлые годы. Их интересует, сколько дней длилась 
 # самая длинная оттепель. Оттепелью они называют период, в который среднесуточная температура 
 # ежедневно превышала 0 градусов Цельсия. Напишите программу, помогающую синоптикам в работе.
+
+from random import randint
+
+# days = int(input("Введите количество дней : "))
+# temp = 1
+# count = 0
+# total_days = 0
+
+# for i in range(days) :
+#     temp += randint(-3, 3)
+#     print (temp)
+    
+#     if temp > 0 :
+#         count += 1
+#     else :
+#         count = 0
+#     if total_days < count :
+#         total_days = count
+        
+# print(f"Оттепель длилась {total_days} дня / дней")
