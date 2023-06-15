@@ -12,5 +12,5 @@ def math_power(base, pow):
         return 1
     return math_power(base, pow - 1) * base
 
-print(math_power(base, pow))
+print(f"Число {base} в степени {pow} будет равно {math_power(base, pow)}")
     
