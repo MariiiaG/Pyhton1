@@ -12,4 +12,4 @@ def plus (num1, num2):
         return num1
     return plus(num1 + 1, num2 - 1)
 
-print(plus(num1, num2))
+print(f"Сумма {num1} и {num2} равна {plus(num1, num2)}")
