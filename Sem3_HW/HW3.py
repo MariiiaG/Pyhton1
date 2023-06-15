@@ -23,19 +23,41 @@
 # ноутбук
 #     12
 
-my_dict = {}
-my_dict = dict.fromkeys(['A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R', 'А', 'В', 'Е', 'И', 'Н', 'О', 'Р', 'С', 'Т'], 1)
-my_dict.update(dict.fromkeys(['D', 'G', 'Д', 'К', 'Л', 'М', 'П', 'У'], 2))
-my_dict.update(dict.fromkeys(['B', 'C', 'M', 'P', 'Б', 'Г', 'Ё', 'Ь', 'Я'], 3))
-my_dict.update(dict.fromkeys(['F', 'H', 'V', 'W', 'Y', 'Й', 'Ы'], 4))
-my_dict.update(dict.fromkeys(['K', 'Ж', 'З', 'Х', 'Ц', 'Ч'], 5))
-my_dict.update(dict.fromkeys(['J', 'X', 'Ш', 'Э', 'Ю'], 8))
-my_dict.update(dict.fromkeys(['Q', 'Z', 'Ф', 'Щ', 'Ъ'], 10))
+# my_dict = {}
+# my_dict = dict.fromkeys(['A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R', 'А', 'В', 'Е', 'И', 'Н', 'О', 'Р', 'С', 'Т'], 1)
+# my_dict.update(dict.fromkeys(['D', 'G', 'Д', 'К', 'Л', 'М', 'П', 'У'], 2))
+# my_dict.update(dict.fromkeys(['B', 'C', 'M', 'P', 'Б', 'Г', 'Ё', 'Ь', 'Я'], 3))
+# my_dict.update(dict.fromkeys(['F', 'H', 'V', 'W', 'Y', 'Й', 'Ы'], 4))
+# my_dict.update(dict.fromkeys(['K', 'Ж', 'З', 'Х', 'Ц', 'Ч'], 5))
+# my_dict.update(dict.fromkeys(['J', 'X', 'Ш', 'Э', 'Ю'], 8))
+# my_dict.update(dict.fromkeys(['Q', 'Z', 'Ф', 'Щ', 'Ъ'], 10))
 
-word = str(input("Введите слово : "))
-word = word.upper()
-word_score = 0
+# word = str(input("Введите слово : "))
+# word = word.upper()
+# word_score = 0
 
-for i in word :
-    word_score += my_dict[i]
-print(word_score)
+# for i in word :
+#     word_score += my_dict[i]
+# print(word_score)
+
+
+
+# Решение с семинара : 
+
+letters = {'AEIOULNSTRАВЕИНОРСТ' : 1,
+           'DGДКЛМПУ' : 2,
+           'BCMPБГЁЬЯ' : 3,
+           'FHVWYЙЫ' : 4,
+           'KЖЗХЦЧ' : 5,
+           'JXШЭЮ' : 8,
+           'QZФЩЪ' : 10}
+
+word = input ("Enter the word : ")
+
+total = 0
+for ch in word.upper():
+    for letter , score in letters.items():
+        if ch in letter :
+            total += score
+            
+print(f'Слово "{word}" весит {total} очков')

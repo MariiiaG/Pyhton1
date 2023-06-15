@@ -7,21 +7,33 @@
 #     3
 #     -> 1
 
-import random
-from random import randint
+# import random
+# from random import randint
 
-length = int(input("Введите количество элементов : "))
-findnum = int(input("Введите число X : "))
+# length = int(input("Введите количество элементов : "))
+# findnum = int(input("Введите число X : "))
+
+# my_list = []
+# for i in range(length) :
+#     my_list.append(random.randint(0,10))
+# print(my_list)
+
+# count = 0
+
+# for i in range(length):
+#     if my_list[i] == findnum :
+#         count += 1
+# print(count)
+
+
+# Решение с семинара :
+
+import random
 
 my_list = []
-for i in range(length) :
-    my_list.append(random.randint(0,10))
+for i in range(15):
+    my_list.append(random.randint(0, 10))
 print(my_list)
+number = int(input("Введите число : "))
 
-count = 0
-
-for i in range(length):
-    if my_list[i] == findnum :
-        count += 1
-print(count)
-
+print(f"Число {number} встречается в списке {my_list.count(number)} раз/a")
