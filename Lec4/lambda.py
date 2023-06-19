@@ -17,12 +17,12 @@
 # def calc2(a, b):
 #     return a * b
 
-# def math(op, x, y): # op - функция и переменные x, y
-#     print(op(x, y))
+def math(op, x, y): # op - функция и переменные x, y
+    print(op(x, y))
     
 # calc1 = lambda a,b: a + b #  сработает так же как def calc1 ранее
 
-# math(lambda a, b: a + b, 5, 45) # 50
+math(lambda a, b: a + b, 5, 45) # 50
 # math(calc1, 5, 45) # 50
 # math(calc2, 5, 45) # 225
 
@@ -58,6 +58,6 @@
 # print(res)
 
 
-my_list  = '123jhh45hj6h57h5jh2h452k3h4'
-new_list = list(filter(lambda x : x.isdigit(), my_list))
-print(new_list) # ['1', '2', '3', '4', '5', '6', '5', '7', '5', '2', '4', '5', '2', '3', '4']
+# my_list  = '123jhh45hj6h57h5jh2h452k3h4'
+# new_list = list(filter(lambda x : x.isdigit(), my_list))
+# print(new_list) # ['1', '2', '3', '4', '5', '6', '5', '7', '5', '2', '4', '5', '2', '3', '4']
